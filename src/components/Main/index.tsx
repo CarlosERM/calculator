@@ -1,8 +1,14 @@
 import React from 'react'
+import Header from '../header'
+import CalculatorBody from './style'
 
 const Calculator = () => {
+
   return (
-    <div>Calculator</div>
+    // <Header />
+    <CalculatorBody>
+      <Header />
+    </CalculatorBody>
   )
 }
 

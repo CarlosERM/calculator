@@ -1,6 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+
 
 export const GlobalStyle = createGlobalStyle`
+    html {
+        box-sizing:border-box;
+    }  
+    *, *::before, *::after {
+        box-sizing: inherit;
+    }
+
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -30,6 +39,8 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Spartan', sans-serif !important;
         font-size: 2rem;
         line-height: 1;
+        background: ${({theme}) => theme.color.backgrounds.main};
+        color: white;
     }
     ol, ul {
         list-style: none;
@@ -46,10 +57,5 @@ export const GlobalStyle = createGlobalStyle`
         border-collapse: collapse;
         border-spacing: 0;
     }
-    html {
-        box-sizing:border-box;
-    }  
-    *, *::before, *::after {
-        box-sizing: inherit;
-    }
+
 `;
