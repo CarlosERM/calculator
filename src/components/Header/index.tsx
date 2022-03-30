@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlockToggle, HeaderBody, HeaderTitle, NumberBlock, NumberToggle, TextToggle, ThemeToggle, ToggleStyle } from './style';
+import { BlockToggle, HeaderBody, HeaderTitle, NumberBlock, NumberToggle, TextToggle, ThemeToggle, ToggleBall, ToggleStyle } from './style';
 
 const Header = () => {
   return (
@@ -13,7 +13,9 @@ const Header = () => {
                     <NumberToggle>2</NumberToggle>
                     <NumberToggle>3</NumberToggle>
                 </NumberBlock>
-                <ToggleStyle/>
+                <ToggleStyle>
+                  <ToggleBall />
+                </ToggleStyle>
             </BlockToggle>
         </ThemeToggle>
     </HeaderBody>

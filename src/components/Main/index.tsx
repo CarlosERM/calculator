@@ -1,5 +1,7 @@
 import React from 'react'
-import Header from '../header'
+import Header from '../Header'
+import Input from '../Input'
+import Output from '../Output'
 import CalculatorBody from './style'
 
 const Calculator = () => {
@@ -8,6 +10,8 @@ const Calculator = () => {
     // <Header />
     <CalculatorBody>
       <Header />
+      <Output/>
+      <Input />
     </CalculatorBody>
   )
 }
