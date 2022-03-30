@@ -4,9 +4,11 @@ import styled from 'styled-components'
 const InputBody = styled.div`
     background-color: ${({theme}) => theme.color.backgrounds.toggle};
     border-radius: .625rem;
-    padding: 1.5625rem;
+    padding: 1.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: .8125rem;
+    grid-row-gap: 1.0625rem;
 `;
 
 export default InputBody;
