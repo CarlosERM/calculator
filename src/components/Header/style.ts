@@ -6,7 +6,7 @@ export const HeaderBody = styled.header`
     justify-content:space-between;
     margin-bottom:2rem;
     color: ${({theme}) => theme.color.text.headerColor};
-    transition: all 0.50s linear;
+    transition: color 0.50s linear;
 
 `;
 
@@ -48,11 +48,10 @@ export const BlockToggle = styled.div`
 export const ToggleStyle = styled.div`
     height:1.625rem;
     width:4.375rem;
-    background: ${({theme}) => theme.color.backgrounds.toggle};
-    transition: all 0.50s linear;
+    background-color: ${({theme}) => theme.color.backgrounds.toggle};
+    transition: background-color 0.50s linear;
 
     border-radius: 1rem;
-    /* padding: .1875rem; */
     position:relative;
 `;
 
@@ -60,7 +59,7 @@ export const ToggleBall = styled.div`
     width:.9375rem;
     height: .9375rem;
     background-color: ${({theme}) => theme.color.keys.equalKeyBackground};
-    transition: all 0.50s linear;
+    transition: background-color 0.50s linear;
 
     border-radius: 50%;
     margin: auto 0;

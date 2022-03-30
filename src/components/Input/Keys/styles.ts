@@ -43,5 +43,6 @@ export const KeyResetBody = styled(KeyDelResetBody)`
 
 export const KeyEqualBody = styled(KeyResetBody)`
      background-color: ${({theme}) => theme.color.keys.equalKeyBackground};
-    box-shadow: 0rem .25rem ${({theme}) => theme.color.keys.equalKeyShadow} ;
+    box-shadow: 0rem .25rem ${({theme}) => theme.color.keys.equalKeyShadow};
+    transition: all 0.50s linear;
 `

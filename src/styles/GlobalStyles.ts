@@ -38,12 +38,12 @@ export const GlobalStyle = createGlobalStyle`
         display: block;
     }
     body {
-        transition: all 0.50s linear;
+        transition: background-color 0.50s linear;
         min-height: 100%;
         font-family: 'Spartan', sans-serif !important;
         font-size: 2rem;
         line-height: 1;
-        background: ${({theme}) => theme.color.backgrounds.main};
+        background-color: ${({theme}) => theme.color.backgrounds.main};
         position:relative;
     }
     ol, ul {
