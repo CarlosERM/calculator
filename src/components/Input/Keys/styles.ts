@@ -14,9 +14,7 @@ export const KeyNumBody = styled.button`
     border-radius: .3125rem;
     font-family: 'Spartan', sans-serif;
     color: ${({theme}) => theme.color.text.primaryColor};
-    transition: all 0.50s linear;
-
-    ; 
+    transition: background-color 0.50s linear, box-shadow 0.50s linear, color 0.50s linear;
 
     &:hover {
         opacity: 0.8;
@@ -24,12 +22,10 @@ export const KeyNumBody = styled.button`
     }
 `;
 
-
 export const KeyDelResetBody = styled(KeyNumBody)`
     background-color: ${({theme}) => theme.color.keys.delResetKeyBackground};
     box-shadow: 0rem .25rem ${({theme}) => theme.color.keys.delResetKeyShadow} ;
-    transition: all 0.50s linear;
-
+    transition: background-color 0.50s linear, box-shadow 0.50s linear;
     font-size:1.0625rem;
     color: white;
 `;
@@ -44,5 +40,5 @@ export const KeyResetBody = styled(KeyDelResetBody)`
 export const KeyEqualBody = styled(KeyResetBody)`
      background-color: ${({theme}) => theme.color.keys.equalKeyBackground};
     box-shadow: 0rem .25rem ${({theme}) => theme.color.keys.equalKeyShadow};
-    transition: all 0.50s linear;
+    transition: background-color 0.50s linear, box-shadow 0.50s linear;
 `

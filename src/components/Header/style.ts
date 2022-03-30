@@ -1,3 +1,4 @@
+import internal from 'stream';
 import styled from 'styled-components'
 import theme1 from '../../styles/theme1';
 
@@ -29,7 +30,7 @@ export const TextToggle = styled.p`
 export const NumberBlock = styled.div`
     display:flex;
     justify-content: space-between;
-    gap:1rem;
+    gap:1.4rem;
     margin-top: -.3125rem;
 `;
 
@@ -55,16 +56,20 @@ export const ToggleStyle = styled.div`
     position:relative;
 `;
 
-export const ToggleBall = styled.div`
+
+interface ToggleBallProps {
+    toggle: number;
+}
+export const ToggleBall = styled.div<ToggleBallProps>`
     width:.9375rem;
     height: .9375rem;
     background-color: ${({theme}) => theme.color.keys.equalKeyBackground};
     transition: background-color 0.50s linear;
-
     border-radius: 50%;
     margin: auto 0;
     position:relative;
     top:50%;
-    left: .3125rem;
+    left: ${({toggle}) => toggle == 0 ? ".3125rem" : toggle == 1 ? "calc(50% -  .5rem)" : "calc(100% -  1.25rem)"};
     transform: translateY(-50%);
+    transition: left 0.2s linear;
 `;

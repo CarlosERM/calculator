@@ -13,9 +13,7 @@ function App() {
   const [theme, setTheme] = React.useState(theme1);
 
   const { toggle} =  useMyContext();
-  console.log("Renderizou");
   React.useEffect(() => {
-    console.log(toggle);
 
     if (toggle == 0) {
       setTheme(theme1);

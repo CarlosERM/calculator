@@ -57,9 +57,19 @@ export const GlobalStyle = createGlobalStyle`
         content: '';
         content: none;
     }
+
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    .start {
+        left: 1%;
+    }
+    .middle {
+        left: 50%;
+    }
+    .end {
+        left: 100%;
     }
 
 `;

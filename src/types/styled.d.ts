@@ -26,6 +26,6 @@ declare module 'styled-components' {
                 terciaryColor:string;
                 equalColor: string;
             };
-        }
+        }; 
     }
 }

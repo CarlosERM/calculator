@@ -10,7 +10,7 @@ const OutputBody = styled.input`
     transition: background-color 0.50s linear;
 
     font-weight: 700;
-    color: white;
+    color: ${({theme}) => theme.color.text.headerColor};
     text-align: right;
     margin-bottom:1.5rem;
     border: none;
