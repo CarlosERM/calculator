@@ -9,10 +9,13 @@ const Calculator = () => {
   return (
     // <Header />
     <CalculatorBody>
+      {/* <ContextProvider> */}
+      
       <Header />
       <Output/>
       <Input />
-      
+      {/* </ContextProvider> */}
+
     </CalculatorBody>
   )
 }

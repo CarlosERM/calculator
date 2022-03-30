@@ -1,5 +1,5 @@
 import React from 'react'
-import {KeyNumBody, KeyDelResetBody, KeyResetBody} from './styles';
+import {KeyNumBody, KeyDelResetBody, KeyResetBody, KeyEqualBody} from './styles';
 
 const Key = () => {
   return (
@@ -21,6 +21,7 @@ const Key = () => {
       <KeyNumBody>/</KeyNumBody>
       <KeyNumBody>x</KeyNumBody>
       <KeyResetBody>reset</KeyResetBody>
+      <KeyEqualBody>=</KeyEqualBody>
     </>
 
   )

@@ -5,6 +5,8 @@ import styled from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing:border-box;
+        height: 100%;
+
     }  
     *, *::before, *::after {
         box-sizing: inherit;
@@ -36,11 +38,13 @@ export const GlobalStyle = createGlobalStyle`
         display: block;
     }
     body {
+        transition: all 0.50s linear;
+        min-height: 100%;
         font-family: 'Spartan', sans-serif !important;
         font-size: 2rem;
         line-height: 1;
         background: ${({theme}) => theme.color.backgrounds.main};
-        color: white;
+        position:relative;
     }
     ol, ul {
         list-style: none;

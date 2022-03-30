@@ -16,6 +16,7 @@ export default {
             normalKeyShadow: "hsl(28, 16%, 65%)",
         },
         text: {
+            headerColor: "white",
             primaryColor: "hsl(221, 14%, 31%)",
             resultColor: "hsl(0, 0, 100%)",
             terciaryColor: "hsl(0, 0, 100%)",

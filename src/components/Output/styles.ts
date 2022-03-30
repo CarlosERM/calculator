@@ -7,6 +7,7 @@ const OutputBody = styled.input`
     padding: 1.5938rem 1.5rem;
     font-family: 'Spartan', sans-serif !important;
     font-size:1.9375rem;
+    transition: all 0.50s linear;
 
     font-weight: 700;
     color: white;
@@ -16,4 +17,4 @@ const OutputBody = styled.input`
     width:100%;
 `;
 
-export default OutputBody
+export default OutputBody;

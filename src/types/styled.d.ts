@@ -20,6 +20,7 @@ declare module 'styled-components' {
                 normalKeyShadow: string;
             };
             text: {
+                headerColor: string,
                 primaryColor: string;
                 resultColor: string;
                 terciaryColor:string;

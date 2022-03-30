@@ -9,6 +9,8 @@ const InputBody = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: .8125rem;
     grid-row-gap: 1.0625rem;
+    transition: all 0.50s linear;
+
 `;
 
 export default InputBody;
