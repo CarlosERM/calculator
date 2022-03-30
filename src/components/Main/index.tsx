@@ -12,6 +12,7 @@ const Calculator = () => {
       <Header />
       <Output/>
       <Input />
+      
     </CalculatorBody>
   )
 }

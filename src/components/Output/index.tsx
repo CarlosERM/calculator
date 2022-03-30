@@ -3,9 +3,7 @@ import OutputBody from './styles'
 
 const Output = () => {
   return (
-    <OutputBody>
-      399,981
-    </OutputBody>
+    <OutputBody />
   )
 }
 

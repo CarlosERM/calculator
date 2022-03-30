@@ -7,7 +7,6 @@ const InputBody = styled.div`
     padding: 1.5625rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
 `;
 
 export default InputBody;
