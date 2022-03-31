@@ -1,10 +1,11 @@
-import React from 'react'
-import OutputBody from './styles'
+import React from "react";
+import { useMyContext } from "../../context";
+import OutputBody from "./styles";
 
 const Output = () => {
-  return (
-    <OutputBody />
-  )
-}
+  const { calc, setCalc } = useMyContext();
 
-export default Output
+  return <OutputBody value={calc.num} />;
+};
+
+export default Output;

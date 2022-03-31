@@ -1,13 +1,13 @@
-import React from 'react'
-import Key from './Keys';
-import InputBody from './styles';
+import React from "react";
+import Key from "./Keys";
+import InputBody from "./styles";
 
 const Input = () => {
   return (
     <InputBody>
-    <Key />
+      <Key />
     </InputBody>
-  )
-}
+  );
+};
 
 export default Input;
