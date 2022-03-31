@@ -1,5 +1,6 @@
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import React from "react";
+import { callbackify } from "util";
 import { useMyContext } from "../../../context";
 import {
   KeyNumBody,
@@ -10,14 +11,10 @@ import {
 
 const Key = () => {
   const { calc, setCalc } = useMyContext();
-  const removeSpaces = (num: number) => num.toString().replace(/\s/g, "");
 
   function numClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    const value = e.currentTarget.dataset.key;
-    setCalc({
-      ...calc,
-      num: Number(value),
-    });
+    const value: string = e.currentTarget.dataset.key || "0";
+    setCalc({ ...calc, num1: calc.num1 + value });
   }
 
   function delClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
@@ -25,7 +22,8 @@ const Key = () => {
   }
 
   function addClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    console.log(e.currentTarget.dataset.key);
+    const value: string = e.currentTarget.dataset.key || "";
+    setCalc({ ...calc, sign: value });
   }
   function minusClickHandler(
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>

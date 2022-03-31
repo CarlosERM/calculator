@@ -4,9 +4,9 @@ interface ContextProviderProp {
   children: React.ReactNode;
 }
 interface CalcProps {
+  num1: string;
+  num2: string;
   sign: string;
-  num: number;
-  res: number;
 }
 interface ContextProps {
   toggle: number;
@@ -20,9 +20,9 @@ const myContext = React.createContext({} as ContextProps);
 export const ContextProvider = ({ children }: ContextProviderProp) => {
   const [toggle, setToggle] = React.useState(0);
   const [calc, setCalc] = React.useState({
+    num1: "0",
+    num2: "0",
     sign: "",
-    num: 0,
-    res: 0,
   });
 
   function handleToggle() {
