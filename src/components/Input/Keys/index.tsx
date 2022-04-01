@@ -18,13 +18,16 @@ const Key = () => {
       | React.KeyboardEvent<HTMLButtonElement>
   ) => {
     let value: string = e.currentTarget.dataset.key || "0";
+
     if (
+      (value === "0" && calc === "") ||
+      (value === "0" && calc.slice(-2) === "/ ") ||
       (operators.includes(value.trim()) && calc === "") ||
-      (operators.includes(value.trim()) && operators.includes(calc.slice(-1)))
+      (operators.includes(value.trim()) &&
+        operators.includes(calc.slice(-2).trim()))
     ) {
       return;
     }
-
     setCalc(calc + value);
   };
 
@@ -49,7 +52,7 @@ const Key = () => {
       return;
     }
 
-    setCalc(String(eval(calc.replace(" x ", "*"))));
+    setCalc(String(eval(calc.replaceAll(" x ", "*"))));
   };
 
   return (
