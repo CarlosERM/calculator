@@ -1,7 +1,9 @@
 ## Calculator(Front End Mentor)
 
 **Technologies:** React, Typescript, Styled-Components, Context Api, Hooks.
+
 **Live Site:** https://carloserm.github.io/calculator/
+
 **Code:** https://github.com/CarlosERM/calculator
 
 ## Mobile:
