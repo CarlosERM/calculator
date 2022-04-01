@@ -3,27 +3,19 @@ import React from "react";
 interface ContextProviderProp {
   children: React.ReactNode;
 }
-interface CalcProps {
-  num1: string;
-  num2: string;
-  sign: string;
-}
+
 interface ContextProps {
   toggle: number;
   handleToggle: () => void;
-  calc: CalcProps;
-  setCalc: React.Dispatch<React.SetStateAction<CalcProps>>;
+  calc: string;
+  setCalc: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const myContext = React.createContext({} as ContextProps);
 
 export const ContextProvider = ({ children }: ContextProviderProp) => {
   const [toggle, setToggle] = React.useState(0);
-  const [calc, setCalc] = React.useState({
-    num1: "0",
-    num2: "0",
-    sign: "",
-  });
+  const [calc, setCalc] = React.useState("");
 
   function handleToggle() {
     setToggle(toggle + 1);

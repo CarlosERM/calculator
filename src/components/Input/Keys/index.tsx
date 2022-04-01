@@ -11,111 +11,109 @@ import {
 
 const Key = () => {
   const { calc, setCalc } = useMyContext();
+  const operators = ["/", "x", "+", "-", "."];
 
-  function numClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  const updateHandler = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     const value: string = e.currentTarget.dataset.key || "0";
-    setCalc({ ...calc, num1: calc.num1 + value });
-  }
 
-  function delClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    console.log(e.currentTarget.dataset.key);
-  }
+    if (
+      (operators.includes(value.trim()) && calc === "") ||
+      (operators.includes(value) && operators.includes(calc.slice(-1)))
+    ) {
+      return;
+    }
+    setCalc(calc + value);
+  };
 
-  function addClickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    const value: string = e.currentTarget.dataset.key || "";
-    setCalc({ ...calc, sign: value });
-  }
-  function minusClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
-  function commaClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
-  function divisionClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
-  function multiplicationClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
-  function resetClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
-  function equalClickHandler(
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    console.log(e.currentTarget.dataset.key);
-  }
+  const deleteHandler = () => {
+    if (calc === "") {
+      return;
+    }
+
+    const value = calc.slice(0, -1);
+
+    setCalc(value);
+  };
+
+  const resetHandler = () => {
+    if (calc === "") {
+      return;
+    }
+
+    setCalc("");
+  };
+
+  const calculate = () => {
+    if (calc === "") {
+      return;
+    }
+
+    setCalc(eval(calc));
+  };
+
   return (
     <>
-      <KeyNumBody onClick={numClickHandler} data-key={7}>
+      <KeyNumBody onClick={updateHandler} data-key={7}>
         7
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={8}>
+      <KeyNumBody onClick={updateHandler} data-key={8}>
         8
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={9}>
+      <KeyNumBody onClick={updateHandler} data-key={9}>
         9
       </KeyNumBody>
 
-      <KeyDelResetBody onClick={delClickHandler} data-key={"DEL"}>
+      <KeyDelResetBody onClick={deleteHandler} data-key={"DEL"}>
         DEL
       </KeyDelResetBody>
 
-      <KeyNumBody onClick={numClickHandler} data-key={4}>
+      <KeyNumBody onClick={updateHandler} data-key={4}>
         4
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={5}>
+      <KeyNumBody onClick={updateHandler} data-key={5}>
         5
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={6}>
+      <KeyNumBody onClick={updateHandler} data-key={6}>
         6
       </KeyNumBody>
 
-      <KeyNumBody onClick={addClickHandler} data-key={"+"}>
+      <KeyNumBody onClick={updateHandler} data-key={" + "}>
         +
       </KeyNumBody>
 
-      <KeyNumBody onClick={numClickHandler} data-key={1}>
+      <KeyNumBody onClick={updateHandler} data-key={1}>
         1
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={2}>
+      <KeyNumBody onClick={updateHandler} data-key={2}>
         2
       </KeyNumBody>
-      <KeyNumBody onClick={numClickHandler} data-key={3}>
+      <KeyNumBody onClick={updateHandler} data-key={3}>
         3
       </KeyNumBody>
 
-      <KeyNumBody onClick={minusClickHandler} data-key={"-"}>
+      <KeyNumBody onClick={updateHandler} data-key={" - "}>
         -
       </KeyNumBody>
-      <KeyNumBody onClick={commaClickHandler} data-key={"."}>
+      <KeyNumBody onClick={updateHandler} data-key={"."}>
         .
       </KeyNumBody>
 
-      <KeyNumBody onClick={numClickHandler} data-key={0}>
+      <KeyNumBody onClick={updateHandler} data-key={0}>
         0
       </KeyNumBody>
 
-      <KeyNumBody onClick={divisionClickHandler} data-key={"/"}>
+      <KeyNumBody onClick={updateHandler} data-key={" / "}>
         /
       </KeyNumBody>
-      <KeyNumBody onClick={multiplicationClickHandler} data-key={"x"}>
+      <KeyNumBody onClick={updateHandler} data-key={" x "}>
         x
       </KeyNumBody>
-      <KeyResetBody onClick={resetClickHandler} data-key={"reset"}>
+      <KeyResetBody onClick={resetHandler} data-key={"reset"}>
         reset
       </KeyResetBody>
-      <KeyEqualBody onClick={equalClickHandler} data-key={"="}>
+      <KeyEqualBody onClick={calculate} data-key={"="}>
         =
       </KeyEqualBody>
     </>
