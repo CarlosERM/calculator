@@ -15,6 +15,7 @@ const OutputBody = styled.input`
   margin-bottom: 1.5rem;
   border: none;
   width: 100%;
+  overflow-x: scroll;
 `;
 
 export default OutputBody;

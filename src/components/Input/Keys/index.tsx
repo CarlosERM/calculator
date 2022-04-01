@@ -28,6 +28,7 @@ const Key = () => {
     ) {
       return;
     }
+
     setCalc(calc + value);
   };
 
