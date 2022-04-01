@@ -1,6 +1,5 @@
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import React from "react";
-import { callbackify } from "util";
 import { useMyContext } from "../../../context";
 import {
   KeyNumBody,
@@ -14,16 +13,18 @@ const Key = () => {
   const operators = ["/", "x", "+", "-", "."];
 
   const updateHandler = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    e:
+      | React.MouseEvent<HTMLButtonElement, MouseEvent>
+      | React.KeyboardEvent<HTMLButtonElement>
   ) => {
-    const value: string = e.currentTarget.dataset.key || "0";
-
+    let value: string = e.currentTarget.dataset.key || "0";
     if (
       (operators.includes(value.trim()) && calc === "") ||
-      (operators.includes(value) && operators.includes(calc.slice(-1)))
+      (operators.includes(value.trim()) && operators.includes(calc.slice(-1)))
     ) {
       return;
     }
+
     setCalc(calc + value);
   };
 
@@ -31,9 +32,7 @@ const Key = () => {
     if (calc === "") {
       return;
     }
-
     const value = calc.slice(0, -1);
-
     setCalc(value);
   };
 
@@ -50,7 +49,7 @@ const Key = () => {
       return;
     }
 
-    setCalc(eval(calc));
+    setCalc(String(eval(calc.replace(" x ", "*"))));
   };
 
   return (
