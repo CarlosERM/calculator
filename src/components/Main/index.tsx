@@ -6,7 +6,7 @@ import CalculatorBody from "./style";
 
 const Calculator = () => {
   return (
-    <CalculatorBody>
+    <CalculatorBody role="calculator_body">
       <Header />
       <Output />
       <Input />

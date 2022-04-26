@@ -5,7 +5,7 @@ import OutputBody from "./styles";
 const Output = () => {
   const { calc } = useMyContext();
 
-  return <OutputBody >
+  return <OutputBody role="output">
           {calc || "0"}
         </OutputBody>;
 };
