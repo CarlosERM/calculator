@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const KeyNumBody = styled.button`
   background-color: ${({ theme }) => theme.color.keys.normalKeyBackground};
+  
   padding-top: 1rem;
   padding-bottom: 0.5625rem;
   padding-left: 0.4375rem;
@@ -16,10 +17,13 @@ export const KeyNumBody = styled.button`
   color: ${({ theme }) => theme.color.text.primaryColor};
   transition: background-color 0.5s linear, box-shadow 0.5s linear,
     color 0.5s linear;
-
   &:hover {
     opacity: 0.8;
     cursor: pointer;
+  }
+
+  @media (min-width:50rem) {
+    padding: 1rem 2.5rem;
   }
 `;
 
@@ -29,12 +33,16 @@ export const KeyDelResetBody = styled(KeyNumBody)`
   transition: background-color 0.5s linear, box-shadow 0.5s linear;
   font-size: 1.0625rem;
   color: white;
+  
 `;
 
 export const KeyResetBody = styled(KeyDelResetBody)`
   grid-column: span 2;
   font-size: 1.0625rem;
   text-transform: uppercase;
+  @media (min-width:50rem) {
+    padding: 1.25rem 5rem;
+  }
 `;
 
 export const KeyEqualBody = styled(KeyResetBody)`

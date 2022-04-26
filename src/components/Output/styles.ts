@@ -16,6 +16,11 @@ const OutputBody = styled.input`
   border: none;
   width: 100%;
   overflow-x: scroll;
+
+  @media (min-width:50rem) {
+    padding: 2.5rem 2.25rem;
+    font-size: 2.8125rem;
+  }
 `;
 
 export default OutputBody;

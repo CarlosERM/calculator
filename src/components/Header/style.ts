@@ -8,7 +8,6 @@ export const HeaderBody = styled.header`
     margin-bottom:2rem;
     color: ${({theme}) => theme.color.text.headerColor};
     transition: color 0.50s linear;
-
 `;
 
 export const HeaderTitle = styled.h1`

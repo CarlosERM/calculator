@@ -12,11 +12,11 @@ function App() {
 
   const { toggle } = useMyContext();
   React.useEffect(() => {
-    if (toggle == 0) {
+    if (toggle === 0) {
       setTheme(theme1);
-    } else if (toggle == 1) {
+    } else if (toggle === 1) {
       setTheme(theme2);
-    } else if (toggle == 2) {
+    } else if (toggle === 2) {
       setTheme(theme3);
     }
   }, [toggle]);

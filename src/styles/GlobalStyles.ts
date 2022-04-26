@@ -1,12 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
-
 
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing:border-box;
         height: 100%;
-
     }  
     *, *::before, *::after {
         box-sizing: inherit;
@@ -57,7 +54,6 @@ export const GlobalStyle = createGlobalStyle`
         content: '';
         content: none;
     }
-
     table {
         border-collapse: collapse;
         border-spacing: 0;
@@ -71,5 +67,4 @@ export const GlobalStyle = createGlobalStyle`
     .end {
         left: 100%;
     }
-
 `;
