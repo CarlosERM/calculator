@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const OutputBody = styled.input`
+const OutputBody = styled.h1`
   background-color: ${({ theme }) => theme.color.backgrounds.screen};
   border-radius: 0.625rem;
   padding: 1.5938rem 1.5rem;
@@ -15,7 +15,7 @@ const OutputBody = styled.input`
   margin-bottom: 1.5rem;
   border: none;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x:hidden;
 
   @media (min-width:50rem) {
     padding: 2.5rem 2.25rem;
