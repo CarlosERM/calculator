@@ -5,7 +5,9 @@ import OutputBody from "./styles";
 const Output = () => {
   const { calc } = useMyContext();
 
-  return <OutputBody type="text" value={calc || "0"} readOnly />;
+  return <OutputBody >
+          {calc || "0"}
+        </OutputBody>;
 };
 
 export default Output;
